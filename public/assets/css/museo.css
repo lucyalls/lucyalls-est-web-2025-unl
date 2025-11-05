@@ -1,0 +1,355 @@
+
+:root {
+    /* colores */
+  --fondo: #332520;
+  --acento: #DCFFA5;
+  --acento-oscuro:#b6ce70;
+  --texto-claro: #f8f9fa;
+  --texto-oscuro: #332520;
+  --bordes: #495057;
+
+  /* para pantallas más chicas */
+  --breakpoint-xs: 0; 
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+    /* fuentes */
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+  /* reset global para que no se rompan los márgenes. No borrar. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;   /* fuente base para todo */
+  line-height: 1.15;
+}
+
+body {
+  margin: 0; /* saca el margen por defecto del navegador */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Fuentes por defecto */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--texto-claro, #f8f9fa); /* color del texto */
+  text-align: left;
+  background-color: var(--fondo, #332520) /* color del fondo */
+}
+
+/* colores de links */
+a {
+  color: var(--acento, #DCFFA5);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--acento-oscuro, #9eb972);
+}
+/**/
+
+/* Estandarización de títulos */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.85rem; }
+h4 { font-size: 1.6rem; }
+h5 { font-size: 1.3rem; }
+h6 { font-size: 1rem; }
+
+.lead { font-size: 1.25rem; font-weight: 300; } /* títulos más grandes */
+.titulo-1 { font-size: 6rem; font-weight: 300; }
+.titulo-2 { font-size: 5.5rem; font-weight: 300; }
+.titulo-3 { font-size: 4.5rem; font-weight: 300; }
+.titulo-4 { font-size: 3.5rem; font-weight: 300; }
+/* */
+
+/* base del grid, para que las columnas se ajusten. No borrar. */
+.row {
+  display: flex;      /* hace que las columnas se alineen horizontalmente */
+  flex-wrap: wrap;    /* permite que las columnas bajen a la siguiente línea si no entran */
+}
+
+/* estandarización de las columnas */
+/* estilos comunes a TODAS las columnas numeradas */
+[class^="col-"] {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+/* columnas genéricas y flexibles */
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/* columnas auto */
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+/* tamaño exacto de cada tipo de columna */
+.col-1  { flex-basis: 8.33333%;  max-width: 8.33333%; }
+.col-2  { flex-basis: 16.66667%; max-width: 16.66667%; }
+.col-3  { flex-basis: 25%;       max-width: 25%; }
+.col-4  { flex-basis: 33.33333%; max-width: 33.33333%; }
+.col-5  { flex-basis: 41.66667%; max-width: 41.66667%; }
+.col-6  { flex-basis: 50%;       max-width: 50%; }
+.col-7  { flex-basis: 58.33333%; max-width: 58.33333%; }
+.col-8  { flex-basis: 66.66667%; max-width: 66.66667%; }
+.col-9  { flex-basis: 75%;       max-width: 75%; }
+.col-10 { flex-basis: 83.33333%; max-width: 83.33333%; }
+.col-11 { flex-basis: 91.66667%; max-width: 91.66667%; }
+.col-12 { flex-basis: 100%;      max-width: 100%; }
+
+
+/* estilo de botones */
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: var(--texto-oscuro, #332520);
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.4rem 0.78rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+/* botones primarios */
+.btn-primary {
+  color: var(--texto-oscuro, #332520);
+  background-color: var(--acento, #DCFFA5);
+  border-color: var(--acento, #DCFFA5);
+}
+
+.btn-primary:hover {
+  color: var(--texto-oscuro, #332520);
+  background-color: var(--acento-oscuro, #b6ce70);
+  border-color: var(--acento-oscuro, #b6ce70);
+}
+
+/* botones secundarios */
+.btn-secondary {
+  color: var(--texto-oscuro, #332520);
+  background-color: var(--acento, #DCFFA5);
+  border-color: var(--acento, #DCFFA5);
+}
+
+.btn-secondary:hover {
+  color: var(--texto-oscuro, #332520);
+  background-color: var(--acento-oscuro, #b6ce70);
+  border-color: var(--acento-oscuro, #b6ce70);
+}
+
+/* navbar */
+.custom-navbar {
+  position: fixed; /* fija la barra al hacer scroll */
+  top: 0; /* siempre arriba */
+  left: 0;
+  width: 100%; 
+  background-color: var(--fondo, #332520);  /* color del fondo */
+  display: flex; /* para alinear los items */
+  justify-content: space-between; /* Links a los extremos y logo en el medio */
+  align-items: center;
+  padding: 0.5rem 2rem; /* márgenes */
+  z-index: 9999; /* para que quede sobre todo */
+}
+
+.custom-navbar .nav-link {
+  color: white; /* color de la letra */
+  margin: 0 0.5rem; /* separación entre links */
+  font-weight: 500;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--acento-oscuro, #b6ce70); /* color al pasar el mouse */
+}
+
+.custom-navbar .navbar-brand .brand-img {
+  height: 70px; /* altura del logo */
+}
+
+/* Contenedores */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #495057;
+  border-radius: 0.2rem;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+/* fondos */
+.bg { background-color: var(--fondo, #332520) !important; }
+.bg-transparent { background-color: transparent !important; }
+
+
+/* bordes */
+.border {border: 1px solid var(--bordes, #495057) !important; }
+.border-top    { border-top: 1px solid var(--bordes, #495057) !important; }
+.border-right  { border-right: 1px solid var(--bordes, #495057) !important; }
+.border-bottom { border-bottom: 1px solid var(--bordes, #495057) !important; }
+.border-left   { border-left: 1px solid var(--bordes, #495057) !important; }
+
+/* justificar contenido */
+.justify-content-start { justify-content: flex-start !important; }
+.justify-content-end { justify-content: flex-end !important; }
+.justify-content-center { justify-content: center !important; }
+.justify-content-between { justify-content: space-between !important; }
+.justify-content-around { justify-content: space-around !important; }
+
+/* márgenes */
+.m-0 { margin: 0 !important; }
+.m-1 { margin: .25rem !important; }
+.m-2 { margin: .5rem !important; }
+.m-3 { margin: 1rem !important; }
+.m-4 { margin: 1.5rem !important; }
+.m-auto { margin: auto !important; }
+
+/* padding */
+.p-0 { padding: 0 !important; }
+.p-1 { padding: 0.25rem !important; }
+.p-2 { padding: 0.5rem !important; }
+.p-3 { padding: 1rem !important; }
+.p-4 { padding: 1.5rem !important; }
+.p-5 { padding: 3rem !important; }
+
+/* alinear texto */
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-center { text-align: center !important; }
+
+/* texto bold */
+.font-weight-bold { font-weight: 700 !important; }
+
+/* textos colores */
+.text-acento { color: var(--acento, #DCFFA5) !important; }
+.text-light { color: #f8f9fa !important; }
+.text-muted { color: #adb5bd !important; }
+
+/* navbar */
+.custom-navbar {
+  height: 100px;
+  background-color: var(--fondo, #332520);
+  border-bottom: 1px solid var(--fondo, #332520);
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav-left { justify-content: flex-start; } /* links a la izquierda */
+.nav-right { justify-content: flex-end; } /* links a la derecha */ 
+
+.navbar-brand { /* el contenedor del logo va en el centro de la pantalla */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-brand .brand-img { /* el logo */
+  max-height: 80px;
+  width: auto;
+}
+
+/* Inicio */
+.header {
+  height: 100vh;
+  max-height: 900px;
+  background: url(../imgs/dino5.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 750px;
+}
+
+.header .overlay {
+  height: 100%;
+  background: rgba(33, 37, 41, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* imágen de "Nosotros" */
+.has-img-bg {
+  background: url(../imgs/dino1.png) no-repeat center center;
+  background-size: cover;
+}
+
+/* títulos de secciones */
+.section-title {
+  font-size: 4rem;
+}
+
+/* colecciones */
+.coleccion-item { /* cada item */
+  padding: 0;
+  border: 1px solid #332520;
+}
+
+.coleccion-item .coleccion-img { /* imágenes dentro de cada item" */
+  width: 100%;
+  height: 100%;
+}
+
+.coleccion-item .coleccion-overlay { /* capa de color al pasar el mouse*/
+  background: rgba(51, 37, 32, 0.5);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.coleccion-item .coleccion-title { /* texto que aparece al pasar el mouse */
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.coleccion-item:hover .coleccion-overlay { /* animación para que aparezcan */
+  visibility: visible;
+  opacity: 1;
+}
