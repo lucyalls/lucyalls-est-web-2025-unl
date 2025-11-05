@@ -1,18 +1,21 @@
-FoodHut Free Bootstrap Restaurant Template for personal and commercial use. Designed with ♥️ and creativity by Devcrud.com 
+LUCÍA ALLASSIA -  ACTIVIDAD SEMANA 2
 
-Product Page: https://wwww.devcrud.com/
+# Proyecto Museo (Versión Node.js)
 
-Credits:
+## Cómo ejecutar el proyecto
 
-    Demo Images:
-        Unsplash:       	(https://www.unsplash.com)
+### Requisitos Previos
+* Node.js
+* NPM
 
-    Icons:
-		Themify Icons: 		(https://themify.me/themify-icons)
+### Instalación
+1.  Clonar el repositorio.
+2.  Ingresar a la carpeta del proyecto.
+3.  Instalar todas las dependencias:
+    `npm install`
 
-	Other:
-		JQuery: 			(https://www.jquery.com)
-		Bootstrap: 			(https://www.getbootstrap.com)
-		wow.js:				(https://wowjs.uk/)	
-		animate.css:		(http://daneden.me/animate)
-		Google Maps:		(http://maps.google.com)
+### Ejecución
+1.  Para levantar el servidor local, corre:
+    `npm start`
+2.  Abre tu navegador y ve a:
+    `http://localhost:3000`
